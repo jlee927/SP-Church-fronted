@@ -8,7 +8,7 @@ export default function News() {
       const fetchData = async () => {
          try {
             const res = await fetch(
-               "https://sp-church-backend-0567e0d19c57.herokuapp.com/contentful/all-news-announcement"
+               "https://sp-church-backend-ea0d64353b32.herokuapp.com/contentful/all-news-announcement"
             );
             if (!res.ok) {
                throw new Error("Network response was not okay");

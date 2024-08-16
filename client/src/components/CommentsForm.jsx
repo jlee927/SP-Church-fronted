@@ -7,7 +7,7 @@ export default function Comments(props) {
       email: "",
       website: "",
       comment: "",
-      postID: props.postID
+      postID: props.postID,
    });
 
    const handleInput = (event) => {
@@ -22,11 +22,14 @@ export default function Comments(props) {
    const handleSubmit = (event) => {
       event.preventDefault();
 
-      fetch("https://sp-church-backend-0567e0d19c57.herokuapp.com/data/comment", {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: JSON.stringify(commentInfo),
-      })
+      fetch(
+         "https://sp-church-backend-ea0d64353b32.herokuapp.com/data/comment",
+         {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(commentInfo),
+         }
+      )
          .then(() => {
             console.log("new blog added");
          })
@@ -85,8 +88,6 @@ export default function Comments(props) {
                댓글 달기
             </button>
          </form>
-         
-
       </div>
    );
 }

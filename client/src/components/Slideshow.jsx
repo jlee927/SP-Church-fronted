@@ -12,7 +12,7 @@ export default function Slideshow() {
       const fetchData = async () => {
          try {
             const response = await fetch(
-               "https://sp-church-backend-0567e0d19c57.herokuapp.com/contentful/slideshow"
+               "https://sp-church-backend-ea0d64353b32.herokuapp.com/contentful/slideshow"
             ); // Adjust the URL as needed
             if (!response.ok) {
                throw new Error("Network response was not ok");

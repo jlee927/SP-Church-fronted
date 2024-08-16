@@ -18,7 +18,7 @@ export default function NewsEntryFullPost() {
       const fetchData = async () => {
          try {
             const res = await fetch(
-               `https://sp-church-backend-0567e0d19c57.herokuapp.com/contentful/single-news-announcement/${id}`
+               `https://sp-church-backend-ea0d64353b32.herokuapp.com/contentful/single-news-announcement/${id}`
             );
             if (!res.ok) {
                throw new Error("Network response was not okay");

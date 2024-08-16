@@ -10,7 +10,7 @@ export default function Comments(props) {
       const fetchData = async () => {
          try {
             const res = await fetch(
-               `https://sp-church-backend-0567e0d19c57.herokuapp.com/data/get-comments/${props.postID}`
+               `https://sp-church-backend-ea0d64353b32.herokuapp.com/data/get-comments/${props.postID}`
             );
             if (!res.ok) {
                throw new Error("Network response was not okay");
@@ -25,7 +25,7 @@ export default function Comments(props) {
       fetchData();
    }, []);
 
-   console.log(commentsData);
+   // console.log(commentsData);
 
    const newData = commentsData.map((comment, key) => {
       const dateObject = parseDate(comment.createdAt);
@@ -65,7 +65,9 @@ export default function Comments(props) {
    });
    return (
       <div className="comment--section--container">
-         <h1 className="comment--section--head">에 대한 {commentsData.length}개의 생각</h1>
+         <h1 className="comment--section--head">
+            에 대한 {commentsData.length}개의 생각
+         </h1>
          {newData}
       </div>
    );
