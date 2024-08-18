@@ -4,7 +4,7 @@ import RenderSermon from "../components/RenderSermon";
 export default function WednesdaySermon() {
   return (
     <div>
-        <RenderSermon blogType="wednesdaySermon" category="기타 설교"/>
+        <RenderSermon blogType="wednesdaySermon" category="에베소서 강해"/>
     </div>
   )
 }
