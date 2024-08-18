@@ -5,21 +5,36 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import News from "./pages/News";
 import NewsEntryFullPost from "./components/NewsEntryFullPost";
+import OtherSermon from "./pages/OtherSermon";
+import Sermon from "./pages/Sermon";
+import SermonFullPost from "./components/SermonFullPost";
+import SundaySermon from "./pages/SundaySermon";
+import WednesdaySermon from "./pages/WednesdaySermon";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
    return (
-      <Router>
+     <Router>
+       <div className="app-container">
          <Navbar />
-         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/news/:id" element={<NewsEntryFullPost />} />
-         </Routes>
-         <Footer/> 
-      </Router>
+         <main>
+           <Routes>
+             <Route path="/" element={<Home />} />
+             <Route path="/gallery" element={<Gallery />} />
+             <Route path="/news" element={<News />} />
+             <Route path="/news/:id" element={<NewsEntryFullPost />} />
+             <Route path="/sermon" element={<Sermon />} />
+             <Route path="/sermon/:id" element={<SermonFullPost />} />
+             <Route path="/sunday-sermon" element={<SundaySermon />} />
+             <Route path="/other-sermon" element={<OtherSermon />} />
+             <Route path="/wednesday-sermon" element={<WednesdaySermon />} />
+           </Routes>
+         </main>
+         <Footer />
+       </div>
+     </Router>
    );
-}
-
-export default App;
+ }
+ 
+ export default App;
+ 

@@ -1,6 +1,6 @@
 import "../assets/styles/navbar.css";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Dropdown(props) {
    const linkNames = props.linkData || [{}];
@@ -15,9 +15,15 @@ export default function Dropdown(props) {
    return (
       <div>
          <div className="dropdown">
-            <button>
-               {props.dropdownName} <i className="fa fa-caret-down"></i>
-            </button>
+            {props.dropdownLink === "n/a" ? (
+               <button className="navButtonLink">
+                  {props.dropdownName} <i className="fa fa-caret-down"></i>
+               </button>
+            ) : (
+               <NavLink className="navButtonLink" to={props.dropdownLink}>
+                  {props.dropdownName} <i className="fa fa-caret-down"></i>
+               </NavLink>
+            )}
 
             <div className="dropdown-content">{links}</div>
          </div>

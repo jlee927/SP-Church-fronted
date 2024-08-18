@@ -132,13 +132,15 @@ body {
    color: #e96657;
 }
 
-.dropdown > button {
+.navButtonLink {
    font-size: 1rem;
    margin-left: 1em;
    font-weight: 250;
    border: none;
    outline: none;
    background-color: inherit;
+   text-decoration: none;
+   color: black;
    /* background-color: grey; */
 }
 
@@ -157,10 +159,10 @@ body {
    z-index: 1000;
 }
 
-.dropdown > button:hover {
+/* .dropdown > button:hover {
    transition: color 0.3s;
    color: #e96657;
-}
+} */
 
 .dropdown-content a {
    float: none;
@@ -174,6 +176,11 @@ body {
 
 .dropdown-content a:hover {
    /* background-color: grey; */
+   transition: color 0.3s;
+   color: #e96657;
+}
+
+.navButtonLink:hover {
    transition: color 0.3s;
    color: #e96657;
 }

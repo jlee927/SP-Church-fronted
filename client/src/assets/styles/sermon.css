@@ -1,19 +1,18 @@
-.news--container {
+.sermon--container {
    display: block;
    font-family: "Roboto", sans-serif;
    margin: 4em auto;
-   /* max-width: 80%; */
    color: #404040;
    padding-left: 9.5vw;
    padding-right: 5vw;
 }
 
-.news--body {
+.sermon--body {
    border-bottom: solid #e9e9e9 2px;
    margin-bottom: 1em;
 }
 
-.news--title {
+.sermon--category {
    text-underline-offset: 0.3em;
    font-weight: 650;
    margin: 0 35em 1em 0;
@@ -24,7 +23,7 @@
    display: inline-block;
 }
 
-.news--title::before {
+.sermon--category::before {
    content: "";
    position: absolute;
    bottom: 0;
@@ -34,15 +33,7 @@
    background-color: #e9e9e9;
 }
 
-@media (min-width: 1250px) {
-   .news--container {
-      /* background-color: pink; */
-      /* max-width: 70%; */
-      padding: 0 15vw;
-   }
-}
-
-.entry--date {
+.sermon--title {
    position: relative; /* Ensure the pseudo-element is positioned relative to this element */
    min-width: 4.5em;
    /* border-bottom: #e96656 2px solid; */
@@ -54,15 +45,16 @@
    color: inherit; /* Ensure the link inherits the color of the surrounding text */
    cursor: pointer;
    margin-bottom: 1em;
-   font-weight: 510;
+   font-weight: 800;
+   
 }
 
-.entry--date:hover {
+.sermon--title:hover {
    transition: color 0.3s;
    color: #e96657;
 }
 
-.entry--date::before {
+.sermon--title::before {
    content: "";
    position: absolute;
    bottom: 0;
@@ -72,20 +64,35 @@
    background-color: #e96656;
 }
 
-.entry--posted {
-   /* border: purple 1px solid; */
+.sermon--posted {
    font-size: 1rem;
    margin-top: -0.9em;
    padding-top: 0.1em;
    font-weight: 400;
 }
 
-.entry--posted span {
+.sermon--posted span {
    color: #888888;
    font-style: italic;
 }
 
-.entry--body {
+.sermon--entry--container {
+
+   /* margin-bottom: 2em; */
+   display: block;
+   font-family: "Roboto", sans-serif;
+   margin: 4em auto;
+   color: #404040;
+   padding-left: 9.5vw;
+   padding-right: 5vw;
+}
+
+.sermon--entry--body {
+    border-bottom: solid #e9e9e9 2px;
+   padding-bottom: 1em;
+}
+
+.sermon--description {
    display: -webkit-box;
    -webkit-box-orient: vertical;
    overflow: hidden;
@@ -94,9 +101,13 @@
    position: relative; /* Ensure the element is positioned */
    max-height: calc(1.2em * 4);
 }
-@media (min-width: 1250px) {
-   .entry--body {
-      max-height: calc(1.2em * 3);
-      -webkit-line-clamp: 3; /* Number of lines to show */
-   }
+
+.player--wrapper {
+   display: flex;
+   margin: 2em 0 2em 0;
+   padding-left: 2em;
+}
+
+.react--player {
+   max-width: 100%;
 }

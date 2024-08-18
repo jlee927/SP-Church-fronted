@@ -63,12 +63,14 @@ export default function Comments(props) {
          </div>
       );
    });
-   return (
-      <div className="comment--section--container">
-         <h1 className="comment--section--head">
-            에 대한 {commentsData.length}개의 생각
-         </h1>
-         {newData}
-      </div>
-   );
+   if (commentsData.length > 0) {
+      return (
+         <div className="comment--section--container">
+            <h1 className="comment--section--head">
+               에 대한 {commentsData.length}개의 생각
+            </h1>
+            {newData}
+         </div>
+      );
+   }
 }

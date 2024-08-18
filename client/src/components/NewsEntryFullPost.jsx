@@ -73,6 +73,8 @@ export default function NewsEntryFullPost() {
 
    // console.log(dataAPI);
    const announcementDate = parseDate(dataAPI.announcementDate);
+
+
    return (
       <div className="news--full--container">
          <div className="news--full--body">

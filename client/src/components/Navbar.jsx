@@ -20,18 +20,35 @@ export default function Navbar() {
             </NavLink>
             <Dropdown
                dropdownName="교회 안내"
+               dropdownLink="n/a"
                linkData={[
                   {
                      linkName: "교회 소식",
                      routerLink: "/news",
                   },
-                  { linkName: "목회 철학", routerLink: "/" },
+                  {
+                     linkName: "목회 철학",
+                     routerLink: "/",
+                  },
                ]}
-               routerLink={["/news", "/"]}
             />
             <Dropdown
                dropdownName="설교"
-               linkNames={["주일 설교", "기타 설교", "에베소서 강해"]}
+               dropdownLink="/sermon"
+               linkData={[
+                  {
+                     linkName: "주일 설교",
+                     routerLink: "/sunday-sermon",
+                  },
+                  {
+                     linkName: "기타 설교",
+                     routerLink: "/other-sermon"
+                  },
+                  {
+                     linkName: "에베소서 강해",
+                     routerLink: "/wednesday-sermon"
+                  },
+               ]}
             />
             <a>매일성경</a>
             <NavLink to="/gallery">박화신 목사 컬럼</NavLink>

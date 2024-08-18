@@ -32,6 +32,8 @@ export default function Comments(props) {
       )
          .then(() => {
             console.log("new blog added");
+      window.location.reload();
+
          })
          .catch((err) => console.error("Error:", err));
    };
