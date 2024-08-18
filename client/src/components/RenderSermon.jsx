@@ -9,7 +9,7 @@ export default function Sermon(props) {
       const fetchData = async () => {
          try {
             const res = await fetch(
-               `https://sp-church-backend-ea0d64353b32.herokuapp.com/contentful/all-sermon-announcement/${props.blogType}`  
+               `https://sp-church-backend-ea0d64353b32.herokuapp.com/contentful/all-sermon-announcement/${props.blogType}`
             );
 
             if (!res.ok) {
@@ -42,7 +42,7 @@ export default function Sermon(props) {
    return (
       <div className="sermon--container">
          <h1 className="sermon--category">
-            <span>[카테고리:] 설교</span>
+            <span>[카테고리:] {props.category}</span>
          </h1>
          {renderedSermonData}
       </div>
