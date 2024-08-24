@@ -7,12 +7,12 @@ export default function Slideshow() {
    const [currImage, setCurrImage] = useState(0);
    const [dataAPI, setDataApi] = useState([{}]);
    const [error, setError] = useState(null);
-
+   const apiUrl = import.meta.env.VITE_API_BASE_URL;
    useEffect(() => {
       const fetchData = async () => {
          try {
             const response = await fetch(
-               "https://sp-church-backend-ea0d64353b32.herokuapp.com/contentful/slideshow"
+               `${apiUrl}/contentful/slideshow`
             ); // Adjust the URL as needed
             if (!response.ok) {
                throw new Error("Network response was not ok");

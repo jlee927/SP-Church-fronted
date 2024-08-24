@@ -1,14 +1,18 @@
 import "../assets/styles/commentsForm.css";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
-export default function Comments(props) {
+export default function Comments() {
+   const { id } = useParams();
    const [commentInfo, setCommentInfo] = useState({
       name: "",
       email: "",
       website: "",
       comment: "",
-      postID: props.postID,
+      postID: id,
    });
+
+   const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
    const handleInput = (event) => {
       setCommentInfo((prevFormData) => {
@@ -22,18 +26,14 @@ export default function Comments(props) {
    const handleSubmit = (event) => {
       event.preventDefault();
 
-      fetch(
-         "https://sp-church-backend-ea0d64353b32.herokuapp.com/data/comment",
-         {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(commentInfo),
-         }
-      )
+      fetch(`${apiUrl}/data/comment`, {
+         method: "POST",
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify(commentInfo),
+      })
          .then(() => {
             console.log("new blog added");
-      window.location.reload();
-
+            window.location.reload();
          })
          .catch((err) => console.error("Error:", err));
    };

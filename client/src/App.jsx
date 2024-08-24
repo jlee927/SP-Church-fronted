@@ -1,4 +1,5 @@
 import "./App.css";
+import DailyBible from "./pages/DailyBible";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
@@ -28,6 +29,7 @@ function App() {
              <Route path="/sunday-sermon" element={<SundaySermon />} />
              <Route path="/other-sermon" element={<OtherSermon />} />
              <Route path="/wednesday-sermon" element={<WednesdaySermon />} />
+             <Route path="/daily-bible" element={<DailyBible />} />
            </Routes>
          </main>
          <Footer />

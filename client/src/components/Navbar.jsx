@@ -42,15 +42,15 @@ export default function Navbar() {
                   },
                   {
                      linkName: "기타 설교",
-                     routerLink: "/other-sermon"
+                     routerLink: "/other-sermon",
                   },
                   {
                      linkName: "에베소서 강해",
-                     routerLink: "/wednesday-sermon"
+                     routerLink: "/wednesday-sermon",
                   },
                ]}
             />
-            <a>매일성경</a>
+            <NavLink to="/daily-bible">매일성경</NavLink>
             <NavLink to="/gallery">박화신 목사 컬럼</NavLink>
             <Dropdown
                dropdownName="갤러리"

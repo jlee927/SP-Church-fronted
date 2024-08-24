@@ -14,11 +14,13 @@ export default function NewsEntryFullPost() {
 
    const [dataAPI, setDataAPI] = useState([]);
 
+   const apiUrl = import.meta.env.VITE_API_BASE_URL;
+   console.log(apiUrl)
    useEffect(() => {
       const fetchData = async () => {
          try {
             const res = await fetch(
-               `https://sp-church-backend-ea0d64353b32.herokuapp.com/contentful/single-news-announcement/${id}`
+               `${apiUrl}/contentful/single-news-announcement/${id}`
             );
             if (!res.ok) {
                throw new Error("Network response was not okay");

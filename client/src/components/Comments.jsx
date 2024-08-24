@@ -2,15 +2,19 @@ import "../assets/styles/comments.css";
 import commentProfile from "../images/comment-profile.png";
 import parseDate from "../../parseDate";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-export default function Comments(props) {
+export default function Comments() {
    const [commentsData, setCommentsData] = useState([]);
-   //    const { postID } = useParams();
+   const apiUrl = import.meta.env.VITE_API_BASE_URL;
+
+   const { id } = useParams();
+
    useEffect(() => {
       const fetchData = async () => {
          try {
             const res = await fetch(
-               `https://sp-church-backend-ea0d64353b32.herokuapp.com/data/get-comments/${props.postID}`
+               `${apiUrl}/data/get-comments/${id}`
             );
             if (!res.ok) {
                throw new Error("Network response was not okay");

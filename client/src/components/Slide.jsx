@@ -11,6 +11,7 @@ export default function Slide(props) {
                   url={props.contentUrl}
                   width="100%"
                   height="100%"
+                  controls
                />
             </div>
          ) : (

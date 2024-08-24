@@ -8,13 +8,6 @@ export default function SermonEntry(props) {
             to={{
                pathname: `/sermon/${props.entryKey}`,
             }}
-            state={{
-               title: props.title,
-               video: props.video,
-               description: props.description,
-               entryKey: props.entryKey,
-               createdDate: props.createdDate,
-            }}
          >
             {props.title}
          </Link>
@@ -26,8 +19,17 @@ export default function SermonEntry(props) {
             </span>
          </h3>
 
-         {/* <p className="sermon--description">{props.description}</p> */}
+         <Link
+            className="sermon--leave--comment"
+            to={{
+               pathname: `/sermon/${props.entryKey}`,
+            }}
+         >
+            댓글 남기기
+         </Link>
          <br></br>
+         <br></br>
+         {/* <p className="sermon--description">{props.description}</p> */}
       </div>
    );
 }

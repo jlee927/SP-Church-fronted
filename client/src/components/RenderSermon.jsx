@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 
 export default function Sermon(props) {
    const [sermonData, setSermonData] = useState([]);
-
+   const apiUrl = import.meta.env.VITE_API_BASE_URL;
    useEffect(() => {
       const fetchData = async () => {
          try {
             const res = await fetch(
-               `https://sp-church-backend-ea0d64353b32.herokuapp.com/contentful/all-sermon-announcement/${props.blogType}`
+               `${apiUrl}/contentful/all-sermon-announcement/${props.blogType}`
             );
 
             if (!res.ok) {
@@ -24,8 +24,6 @@ export default function Sermon(props) {
       };
       fetchData();
    }, []);
-
-   //    console.log(sermonData);
 
    const renderedSermonData = sermonData.map((sermon, key) => {
       return (
