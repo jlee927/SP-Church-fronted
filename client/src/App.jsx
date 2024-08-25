@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import News from "./pages/News";
 import NewsEntryFullPost from "./components/NewsEntryFullPost";
 import OtherSermon from "./pages/OtherSermon";
+import PastorPark from "./pages/PastorPark";
 import Sermon from "./pages/Sermon";
 import SermonFullPost from "./components/SermonFullPost";
 import SundaySermon from "./pages/SundaySermon";
@@ -21,7 +22,6 @@ function App() {
          <main>
            <Routes>
              <Route path="/" element={<Home />} />
-             <Route path="/gallery" element={<Gallery />} />
              <Route path="/news" element={<News />} />
              <Route path="/news/:id" element={<NewsEntryFullPost />} />
              <Route path="/sermon" element={<Sermon />} />
@@ -30,6 +30,8 @@ function App() {
              <Route path="/other-sermon" element={<OtherSermon />} />
              <Route path="/wednesday-sermon" element={<WednesdaySermon />} />
              <Route path="/daily-bible" element={<DailyBible />} />
+             <Route path="/pastor-park-column" element={<PastorPark />}/>
+             <Route path="/gallery" element={<Gallery />} />
            </Routes>
          </main>
          <Footer />

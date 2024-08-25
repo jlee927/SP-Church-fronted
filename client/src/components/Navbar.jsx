@@ -51,7 +51,7 @@ export default function Navbar() {
                ]}
             />
             <NavLink to="/daily-bible">매일성경</NavLink>
-            <NavLink to="/gallery">박화신 목사 컬럼</NavLink>
+            <NavLink to="/pastor-park-column">박화신 목사 컬럼</NavLink>
             <Dropdown
                dropdownName="갤러리"
                linkNames={["동영상들", "최근 사진들", "보관된 오랜 사진들"]}

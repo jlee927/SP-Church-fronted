@@ -7,15 +7,12 @@ import { useLocation, useParams } from "react-router-dom";
 
 export default function NewsEntryFullPost() {
    const { id } = useParams();
-   const location = useLocation();
    const dateCreated = location.state || {};
 
-   // console.log(location);
 
    const [dataAPI, setDataAPI] = useState([]);
 
    const apiUrl = import.meta.env.VITE_API_BASE_URL;
-   console.log(apiUrl)
    useEffect(() => {
       const fetchData = async () => {
          try {

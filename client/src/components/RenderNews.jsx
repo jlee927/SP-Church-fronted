@@ -32,6 +32,7 @@ export default function News(props) {
             body={newsEntry.body}
             dateCreated={newsEntry.createdDate}
             dateAnnouncement={newsEntry.announcementDate}
+            title={newsEntry.title}
          />
       );
    });

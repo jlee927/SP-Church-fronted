@@ -7,7 +7,7 @@ export default function DailyBible() {
       <div>
          <RenderNews newsType="dailyBible" category="매일성경" />
 
-         <RecentContent />
+         {/* <RecentContent /> */}
       </div>
    );
 }

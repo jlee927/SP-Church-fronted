@@ -11,7 +11,7 @@ export default function NewsEntry(props) {
             }}
             state={props.dateCreated}   
          >
-            {props.dateAnnouncement.month}월 {props.dateAnnouncement.day}일
+            {props.dateAnnouncement.month}월 {props.dateAnnouncement.day}일 {props.title}
          </Link>
          <h3 className="entry--posted">
             작성일자{" "}
@@ -21,7 +21,15 @@ export default function NewsEntry(props) {
             </span>
          </h3>
          <p className="entry--body">{props.body}</p>
-
+         <Link
+            className="sermon--leave--comment"
+            to={{
+               pathname: `/news/${props.entryKey}`,
+            }}
+         >
+            댓글 남기기
+         </Link>
+         <br />
          {/* implement this one day */}
          {/* <h3 className="entry--category">
             카테고리 교회 소식. 고유주소 북마크.
